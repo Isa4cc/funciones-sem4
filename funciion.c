@@ -1,6 +1,14 @@
 #include <stdio.h>
 
 //En lo posible evitar variables globalesss
+int menu();
+float suma(float a, float b);
+float resta(float a, float b);
+float mult(float a, float b);
+float div(float a, float b);
+
+
+
 int main (int argc, char *argv[]) {
    int op;
    float a,b,res;
@@ -16,8 +24,31 @@ int main (int argc, char *argv[]) {
         res = suma(a,b);
         printf("La suma es %f", res);
         break;
-        //Isaac SEGUIR FASENDO
-    
+    case 2:
+        printf("Ingrese el num1\n");
+        scanf("%f", &a);
+        printf("Ingrese el num2\n");
+        scanf("%f", &b);
+        res = resta(a, b);
+        printf("La resta es %f", res);
+        break;
+
+    case 3:
+        printf("Ingrese el num1\n");
+        scanf("%f", &a);
+        printf("Ingrese el num2\n");
+        scanf("%f", &b);
+        res = mult(a, b);
+        printf("La mutliplicacion es %f", res);
+        break;
+    case 4:
+        printf("Ingrese el num1\n");
+        scanf("%f", &a);
+        printf("Ingrese el num2\n");
+        scanf("%f", &b);
+        res = div(a, b);
+        printf("La div es %f", res);
+        break;
     default:
         break;
     }
@@ -37,7 +68,7 @@ int menu(){
     return opc;
 }
 
-float suma(int a, int b)
+float suma(float a, float b)
 {
     float r;
     r = a + b;
